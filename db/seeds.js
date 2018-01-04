@@ -15,10 +15,10 @@ mongoose.connection.on('error', (error) => {
 
 
 
-User.remove(({})).then(() => {
+User.remove({}).then(() => {
     const davidHanson = new User ({
-        firstname: 'David',
-        lastName: 'Hanson',
+        firstName: 'David',
+        lastName: 'Hanson'
     })
     return davidHanson.save()
 })

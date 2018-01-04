@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const User = require('../db/models/User')
 
 /* GET users listing. */
 router.get('/', function(require, response, next) {

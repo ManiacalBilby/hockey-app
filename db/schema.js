@@ -13,7 +13,7 @@ const UserSchema = new Schema({
     photoUrl: {
         type: String
     },
-    rinks: [ RinkSchema ]
+    // rinks: [ RinkSchema ]
 },
 {
     timestamps: {},
@@ -21,4 +21,4 @@ const UserSchema = new Schema({
 
 })
 
-module.exports = UserSchema
+module.exports = {UserSchema}
