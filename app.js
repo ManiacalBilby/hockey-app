@@ -9,8 +9,7 @@ const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 mongoose.connect(process.env.MONGODB_URI)
 
-const index = require('./routes/index')
-const users = require('./routes/users')
+const userController = require('./controllers/userController')
 
 const app = express()
 
@@ -26,8 +25,10 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 
-app.use('/', index)
-app.use('/users', users)
+app.get ('/', (request, response) => {
+  response.redirect('/users')
+})
+app.use('/users', userController)
 
 // catch 404 and forward to error handler
 app.use(function(require, response, next) {
