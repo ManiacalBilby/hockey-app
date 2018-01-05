@@ -1,10 +1,13 @@
-const express = require('express');
-const router = express.Router();
+const express = require('express')
+const router = express.Router()
 const User = require('../db/models/User')
 
 /* GET users listing. */
-router.get('/', function(require, response, next) {
-  response.send('respond with a resource');
-});
+router.get('/', function(request, response, next) {
+  User.find({})
+    .then((user) => {
+      response.render
+    })
+})
 
-module.exports = router;
+module.exports = router

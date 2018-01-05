@@ -31,14 +31,14 @@ app.get ('/', (request, response) => {
 app.use('/users', userController)
 
 // catch 404 and forward to error handler
-app.use(function(require, response, next) {
+app.use(function(request, response, next) {
   const error = new Error('Not Found')
   error.status = 404
   next(error)
 })
 
 // error handler
-app.use(function(error, require, response, next) {
+app.use(function(error, request, response, next) {
   // set locals, only providing error in development
   response.locals.message = error.message
   response.locals.error = require.app.get('env') === 'development' ? error : {}
