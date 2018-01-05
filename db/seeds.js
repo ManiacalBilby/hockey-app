@@ -20,8 +20,25 @@ mongoose.connection.on('error', (error) => {
 User.remove({}).then(() => {
     const davidHanson = new User ({
         firstName: 'David',
-        lastName: 'Hanson'
+        lastName: 'Hanson',
+        photoUrl: '../img/davidHanson.jpg'
     })
+
+    const centerIce = new Rink({
+        name: 'Center Ice Arena',
+        photoUrl: '../img/centerIce.jpg',
+        phone: '404-549-8425'
+    })
+
+    const mondaySticktime = new Sticktime({
+        dayOfWeek: 'Monday',
+        time: '12:00 PM',
+        price: 10
+    })
+    centerIce.sticktimes.push(mondaySticktime)
+
+    davidHanson.rinks.push(centerIce)
+
     return davidHanson.save()
 })
 .then(() => {
