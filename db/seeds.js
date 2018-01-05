@@ -21,12 +21,12 @@ User.remove({}).then(() => {
     const davidHanson = new User ({
         firstName: 'David',
         lastName: 'Hanson',
-        photoUrl: '../img/davidHanson.jpg'
+        photoUrl: 'https://images-na.ssl-images-amazon.com/images/M/MV5BMTM0Y2FmYTktYWU5Mi00ZDBmLWIxZTMtZTUzNzAwOWMxOTQxXkEyXkFqcGdeQXVyMjUyNDk2ODc@._V1_UY317_CR122,0,214,317_AL_.jpg'
     })
 
     const centerIce = new Rink({
         name: 'Center Ice Arena',
-        photoUrl: '../img/centerIce.jpg',
+        photoUrl: '../public/images/centerIce.jpg',
         phone: '404-549-8425'
     })
 

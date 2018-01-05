@@ -1,3 +1,14 @@
 <h1>{{pageTitle}}</h1>
-<p>Welcome to {{pageTitle}}</p>
 
+<div>
+    {{#each users}}
+    <a href="/users/{{this._id}}">
+        <div>
+            <img src="{{this.photoUrl}}" alt="{{this.firstName}}'s profile photo'">
+        </div>
+        <div>
+            {{this.firstName}} {{this.lastName}}        
+        </div>
+    </a>
+    {{/each}}
+</div>
