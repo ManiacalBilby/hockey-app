@@ -16,4 +16,8 @@ router.get('/', function(request, response, next) {
     })
 })
 
+router.get('/new', (request, response) => {
+  response.render('users/new')
+})
+
 module.exports = router
