@@ -5,8 +5,14 @@ const User = require('../db/models/User')
 /* GET users listing. */
 router.get('/', function(request, response, next) {
   User.find({})
-    .then((user) => {
-      response.render
+    .then((users) => {
+      response.render('users/index', {
+        users,
+        pageTitle: 'Users'
+      })
+    })
+    .catch((error) => {
+      console.log(error)
     })
 })
 
