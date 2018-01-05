@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const sticktimeSchema = new Schema({
+const SticktimeSchema = new Schema({
     dayOfWeek: {
         type: String,
         required: [ true, 'Sticktime day is required' ]
@@ -16,7 +16,7 @@ const sticktimeSchema = new Schema({
     }
 })
 
-const rinkSchema = new Schema({
+const RinkSchema = new Schema({
     name: {
         type: String,
         required: [true, 'Rink name is required']
@@ -27,7 +27,7 @@ const rinkSchema = new Schema({
     phone: {
         type: Number
     },
-    // sticktimes: [ sticktimeSchema ]
+    sticktimes: [ SticktimeSchema ]
 })
 
 const UserSchema = new Schema({
@@ -42,7 +42,7 @@ const UserSchema = new Schema({
     photoUrl: {
         type: String
     },
-    // rinks: [ RinkSchema ]
+    rinks: [ RinkSchema ]
 },
 {
     timestamps: {},
@@ -50,4 +50,8 @@ const UserSchema = new Schema({
 
 })
 
-module.exports = {UserSchema}
+module.exports = {
+    UserSchema,
+    RinkSchema,
+    SticktimeSchema
+}

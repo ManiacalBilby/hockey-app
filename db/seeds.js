@@ -1,5 +1,7 @@
 require('dotenv').config()
 const User = require('./models/User')
+const Rink = require('./models/Rink')
+const Sticktime = require('./models/Sticktime')
 const mongoose = require('mongoose')
 
 mongoose.connect(process.env.MONGODB_URI)
