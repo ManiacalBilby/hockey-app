@@ -6,8 +6,8 @@ const SticktimeSchema = new Schema({
         type: String,
         required: [ true, 'Sticktime day is required' ]
     },
-    Time: {
-        type: Number,
+    time: {
+        type: String,
         required: [ true, 'Why do you think they call it stickTIME?' ]
     },
     price: {
@@ -25,7 +25,7 @@ const RinkSchema = new Schema({
         type: String
     },
     phone: {
-        type: Number
+        type: String
     },
     sticktimes: [ SticktimeSchema ]
 })
