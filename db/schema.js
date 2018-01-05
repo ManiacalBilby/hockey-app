@@ -1,6 +1,21 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
+const sticktimeSchema = new Schema({
+    dayOfWeek: {
+        type: String,
+        required: [ true, 'Sticktime day is required' ]
+    },
+    Time: {
+        type: Number,
+        required: [ true, 'Why do you think they call it stickTIME?' ]
+    },
+    price: {
+        type: Number,
+        required: [ true, 'Sticktime price is required!' ]
+    }
+})
+
 const rinkSchema = new Schema({
     name: {
         type: String,
@@ -12,7 +27,7 @@ const rinkSchema = new Schema({
     phone: {
         type: Number
     },
-    sticktimes: [ sticktimeSchema ]
+    // sticktimes: [ sticktimeSchema ]
 })
 
 const UserSchema = new Schema({

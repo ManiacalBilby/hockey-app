@@ -9,7 +9,7 @@ const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 mongoose.connect(process.env.MONGODB_URI)
 
-const userController = require('./controllers/userController')
+const userController = require('./routes/userController')
 
 const app = express()
 
