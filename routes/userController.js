@@ -20,4 +20,18 @@ router.get('/new', (request, response) => {
   response.render('users/new')
 })
 
+router.get('/:userId', (request, response) => {
+  const userId = request.params.userId
+  User.findById(userId)
+    .then((user) => {
+      response.render('users/show', {
+        user,
+        pageTitle: user.firstName
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+    })
+})
+
 module.exports = router
