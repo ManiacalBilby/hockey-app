@@ -20,6 +20,20 @@ router.get('/new', (request, response) => {
   response.render('users/new')
 })
 
+router.post('/', (request, response) => {
+  const newUser = request.body
+
+  User.create(newUser)
+  .then(() => {
+    response.redirect('/users')
+  })
+  .catch((error) => {
+    console.log(error)
+  })
+})
+
+
+
 router.get('/:userId', (request, response) => {
   const userId = request.params.userId
   User.findById(userId)
