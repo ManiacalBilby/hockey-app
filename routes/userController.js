@@ -66,4 +66,14 @@ router.get('/:userId/edit', (request, response) => {
     })
 })
 
+router.put('/:userId', (request, response) => {
+  const userId = request.params.userId
+  const updatedUserInfo = request.body
+
+  User.findByIdAndUpdate(userId, updatedUserInfo, {new: true})
+  .then(() => {
+    response.redirect(`/users/${userId}`)
+  })
+})
+
 module.exports = router
