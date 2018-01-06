@@ -26,7 +26,7 @@ User.remove({}).then(() => {
 
     const centerIce = new Rink({
         name: 'Center Ice Arena',
-        photoUrl: '../public/images/centerIce.jpg',
+        photoUrl: '../images/centerIce.jpg',
         phone: '404-549-8425'
     })
 
