@@ -1,1 +1,13 @@
-<h1>show all rinks</h1>
+<h1>{{userFullName}}'s Favorite Rinks</h1>
+
+<div>
+    {{#each rinks}}
+    <div>
+        <a href="/users/{{../userId}}/stores/{{this._id}}">
+            <h3>{{this.name}}</h3>
+            <img src="{{this.photoUrl}}" alt="{{this.name}} photo">
+        </a>
+        
+    </div>
+    {{/each}}
+</div>
