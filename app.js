@@ -8,7 +8,7 @@ const cookieParser = require('cookie-parser')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const methodOverride = require('method-override')
-
+//mongoose connection
 mongoose.connect(process.env.MONGODB_URI)
 
 mongoose.connection.once('open', () => {
@@ -19,7 +19,7 @@ mongoose.connection.on('error', (error) => {
   console.error(`MongoDB connection error! ${error}`)
   process.exit(-1)
 })
-
+//controllers
 const userController = require('./routes/userController')
 
 const app = express()
