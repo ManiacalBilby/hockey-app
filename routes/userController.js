@@ -66,6 +66,18 @@ router.get('/:userId/edit', (request, response) => {
     })
 })
 
+router.get('/userId/delete', (request, response) => {
+  const userId = request.params.userId
+
+  User.findByIdAndRemove(userId)
+  .then(() => {
+    response.redirect('/users')
+  })
+  .catch((error) => {
+    console.log(error)
+  })
+})
+
 router.put('/:userId', (request, response) => {
   const userId = request.params.userId
   const updatedUserInfo = request.body
