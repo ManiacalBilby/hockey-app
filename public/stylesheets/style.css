@@ -1,8 +1,33 @@
-body {
+html, body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px 'Open Sans', sans-serif;
+  background-color: #fafafa
 }
 
 a {
-  color: #00B7FF;
+  color: rgb(241, 59, 59);
+  text-decoration: none
+}
+
+.profile_image {
+  height: 200px;
+  width: 200px;
+  border-radius: 25%
+}
+
+.app_title {
+  color: #275DAD;
+  font-family: 'Righteous', cursive;
+  font-size: 3rem;
+}
+
+.user_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 275px;
+  height: 300px; 
+  background-color: #ece6e6;
+  /* box-shadow: 6px 9px 14px 0px rgba(201,197,201,1); */
 }
