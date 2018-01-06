@@ -7,6 +7,8 @@ const logger = require('morgan')
 const cookieParser = require('cookie-parser')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
+const methodOverride = require('method-override')
+
 mongoose.connect(process.env.MONGODB_URI)
 
 mongoose.connection.once('open', () => {
@@ -33,6 +35,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
+app.use(methodOverride('_method'))
 
 app.get ('/', (request, response) => {
   response.redirect('/users')
