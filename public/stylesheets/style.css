@@ -21,6 +21,18 @@ a {
   font-size: 3rem;
 }
 
+.user_card_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.user_cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 .user_card {
   display: flex;
   flex-direction: column;
@@ -28,6 +40,8 @@ a {
   justify-content: center;
   width: 275px;
   height: 300px; 
+  margin-right: 20px;
+  margin-top: 10px;
   background-color: #ece6e6;
   /* box-shadow: 6px 9px 14px 0px rgba(201,197,201,1); */
 }
