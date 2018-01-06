@@ -3,7 +3,7 @@ const router = express.Router()
 const User = require('../db/models/User')
 
 /* GET users listing. */
-router.get('/', function (request, response, next) {
+router.get('/', (request, response, next) => {
   User.find({})
     .then((users) => {
       response.render('users/index', {
