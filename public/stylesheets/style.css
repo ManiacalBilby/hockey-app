@@ -1,5 +1,5 @@
 html, body {
-  padding: 50px;
+  padding: 20px;
   font: 14px 'Open Sans', sans-serif;
   background-color: #fafafa
 }
@@ -9,16 +9,17 @@ a {
   text-decoration: none
 }
 
-.profile_image {
-  height: 200px;
-  width: 200px;
-  border-radius: 25%
-}
-
 .app_title {
   color: #275DAD;
   font-family: 'Righteous', cursive;
   font-size: 3rem;
+  margin: 0 auto;
+}
+
+.profile_image {
+  height: 200px;
+  width: 200px;
+  border-radius: 25%
 }
 
 .user_card_container {
