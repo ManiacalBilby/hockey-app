@@ -21,7 +21,7 @@ router.get('/', (request, response) => {
 
 router.get('/:rinkId', (request, response) => {
     const userId = request.params.userId
-    const rinkId = request.params.userId
+    const rinkId = request.params.rinkId
 
     User.findById(userId)
     .then((user) => {
