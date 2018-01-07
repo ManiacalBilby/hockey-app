@@ -26,8 +26,14 @@ User.remove({}).then(() => {
 
     const centerIce = new Rink({
         name: 'Center Ice Arena',
-        photoUrl: '../images/centerIce.jpg',
+        photoUrl: '/images/centerIce.jpg',
         phone: '404-549-8425'
+    })
+
+    const mariettaIceCenter = new Rink({
+        name: 'Marietta Ice Center',
+        photoUrl: 'https://pbs.twimg.com/profile_images/729418036596314112/EGcshrqo_400x400.jpg',
+        phone: '770-509-5067'
     })
 
     const mondaySticktime = new Sticktime({
@@ -37,7 +43,14 @@ User.remove({}).then(() => {
     })
     centerIce.sticktimes.push(mondaySticktime)
 
-    jackHanson.rinks.push(centerIce)
+    const wednesdaySticktime = new Sticktime({
+        dayOfWeek: 'Wednesday',
+        time: '2:00 PM',
+        price: 15
+    })
+    mariettaIceCenter.sticktimes.push(wednesdaySticktime)
+
+    jackHanson.rinks.push(centerIce, mariettaIceCenter)
 
     return jackHanson.save()
 })
