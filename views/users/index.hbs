@@ -1,16 +1,19 @@
 <h1>{{pageTitle}}</h1>
 <div class="user_card_container">
-<div class="user_cards">
-    {{#each users}}
-    <a href="/users/{{this._id}}" class="user_card">
-        <div>
-            <img class="profile_image"src="{{this.photoUrl}}" alt="{{this.firstName}}'s profile photo">
-        </div>
-        <div>
-            {{this.firstName}} {{this.lastName}}        
-        </div>
-    </a>
-    {{/each}}
+    <div class="user_cards">
+        {{#each users}}
+        <a href="/users/{{this._id}}" class="user_card">
+            <div>
+                <img class="profile_image" src="{{this.photoUrl}}" alt="{{this.firstName}}'s profile photo">
+            </div>
+            <div>
+                {{this.firstName}} {{this.lastName}}
+            </div>
+        </a>
+        {{/each}}
+    </div>
 </div>
+
+<div class='index_button'>
+    <a class="btn" href="/users/new">Create New User</a>
 </div>
-<a href="/users/new">Create New User</a>
