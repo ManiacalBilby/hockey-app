@@ -22,6 +22,7 @@ mongoose.connection.on('error', (error) => {
 //controllers
 const userController = require('./routes/userController')
 const rinkController = require('./routes/rinkController')
+const sticktimeController = require('./routes/sticktimeController')
 
 const app = express()
 
@@ -44,6 +45,7 @@ app.get ('/', (request, response) => {
 
 app.use('/users', userController)
 app.use('/users/:userId/rinks', rinkController)
+app.use('/users/:userId/rinks/:rinkId/sticktimes', sticktimeController)
 
 // catch 404 and forward to error handler
 app.use(function(request, response, next) {
