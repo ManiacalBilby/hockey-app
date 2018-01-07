@@ -19,4 +19,22 @@ router.get('/', (request, response) => {
     })
 })
 
+router.get('/:rinkId', (request, response) => {
+    const userId = request.params.userId
+    const rinkId = request.params.userId
+
+    User.findById(userId)
+    .then((user) => {
+        const rink = user.rinks.id(rinkId)
+        response.render('rinks/show', {
+            userId,
+            rink,
+            pageTitle: 'Rink'
+        })
+    })
+    .catch((error) => {
+        console.log(error)
+    })
+})
+
 module.exports = router
