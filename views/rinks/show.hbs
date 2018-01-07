@@ -1,1 +1,14 @@
-<h1>Show one rink page</h1>
+<h1> One Rink Page</h1>
+
+<div>
+    <h1>{{rink.name}}</h1>
+    <h3>{{rink.phone}}</h3>
+</div>
+
+<div>
+    {{#each rink.sticktimes}}
+    <a href="/users/{{../userId}}/stores/{{../store._id}}/gifts/{{this._id}}">
+    {{this.dayOfWeek}}</a>
+    {{/each}}
+
+</div>
