@@ -28,6 +28,6 @@ The following list are some objectives that need to be completed for this.
 * CSS
 * HTML
 * User Stories - [Trello](https://trello.com/b/OednGeq8/hockey-app "Trello")
-* [Wireframes](https://drive.google.com/open?id=1vpyfZts6kH_kSvTqb2G7H6WNisW_Jz_b)
+* [Wireframes and ERD](https://drive.google.com/open?id=1vpyfZts6kH_kSvTqb2G7H6WNisW_Jz_b)
 
 
