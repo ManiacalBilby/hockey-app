@@ -1,11 +1,12 @@
 <div>
     <h1>{{rink.name}}</h1>
-    <h2>{{rink.location}}</h2>
-    <h3>{{rink.phone}}</h3>
+    <h2>City: {{rink.location}}</h2>
+    <h3>Phone#: {{rink.phone}}</h3>
 </div>
 
 <div>
     {{#each rink.sticktimes}}
+    <h2>Available sticktimes:</h2>
     <a href="/users/{{../userId}}/rinks/{{../rink._id}}/sticktimes/{{this._id}}">
         {{this.dayOfWeek}}
     </a>
