@@ -27,13 +27,15 @@ User.remove({}).then(() => {
     const centerIce = new Rink({
         name: 'Center Ice Arena',
         photoUrl: '/images/centerIce.jpg',
-        phone: '404-549-8425'
+        phone: '404-549-8425',
+        location: 'Sandy Springs'
     })
 
     const mariettaIceCenter = new Rink({
         name: 'Marietta Ice Center',
         photoUrl: 'https://pbs.twimg.com/profile_images/729418036596314112/EGcshrqo_400x400.jpg',
-        phone: '770-509-5067'
+        phone: '770-509-5067',
+        location: 'Marietta'
     })
 
     const mondaySticktime = new Sticktime({
@@ -64,7 +66,8 @@ User.remove({}).then(() => {
         const mariettaIceCenter = new Rink({
             name: 'Marietta Ice Center',
             photoUrl: 'https://pbs.twimg.com/profile_images/729418036596314112/EGcshrqo_400x400.jpg',
-            phone: '770-509-5067'
+            phone: '770-509-5067',
+            location: 'Marietta'
         })
 
         const wednesdaySticktime = new Sticktime({

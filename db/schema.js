@@ -27,6 +27,9 @@ const RinkSchema = new Schema({
     phone: {
         type: String
     },
+    location: {
+        type: String
+    },
     sticktimes: [SticktimeSchema]
 })
 
