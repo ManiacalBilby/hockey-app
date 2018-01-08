@@ -19,6 +19,14 @@ router.get('/', (request, response) => {
         })
 })
 
+router.get('/new', (request, response) => {
+    const userId = request.params.userId
+    response.render('stores/new', {
+        userId,
+        pageTitle: 'New Rink'
+    })
+})
+
 router.get('/:rinkId', (request, response) => {
     const userId = request.params.userId
     const rinkId = request.params.rinkId
