@@ -90,6 +90,6 @@ a.btn:hover {
   background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
   text-decoration: none;
 }
-.index_button {
+.button_container {
   margin-top: 20px;
 }
