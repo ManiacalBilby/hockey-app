@@ -21,7 +21,8 @@ router.get('/', (request, response) => {
 
 router.get('/new', (request, response) => {
     const userId = request.params.userId
-    response.render('stores/new', {
+    
+    response.render('rinks/new', {
         userId,
         pageTitle: 'New Rink'
     })
