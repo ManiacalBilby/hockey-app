@@ -1,6 +1,6 @@
 body {
   font: 14px 'Open Sans', sans-serif;
-  background-color: white
+  background-color: white;
 }
 
 .user_cards a {
@@ -55,6 +55,7 @@ main {
   height: 300px; 
   margin-right: 20px;
   margin-top: 10px;
+  border-radius: 25%;
   /* background-color: #ece6e6; */
 }
 /* box shadow generator used https://www.cssmatic.com/box-shadow */
