@@ -70,22 +70,22 @@ router.get('/:userId/delete', (request, response) => {
   const userId = request.params.userId
 
   User.findByIdAndRemove(userId)
-  .then(() => {
-    response.redirect('/users')
-  })
-  .catch((error) => {
-    console.log(error)
-  })
+    .then(() => {
+      response.redirect('/users')
+    })
+    .catch((error) => {
+      console.log(error)
+    })
 })
 
 router.put('/:userId', (request, response) => {
   const userId = request.params.userId
   const updatedUserInfo = request.body
 
-  User.findByIdAndUpdate(userId, updatedUserInfo, {new: true})
-  .then(() => {
-    response.redirect(`/users/${userId}`)
-  })
+  User.findByIdAndUpdate(userId, updatedUserInfo, { new: true })
+    .then(() => {
+      response.redirect(`/users/${userId}`)
+    })
 })
 
 module.exports = router

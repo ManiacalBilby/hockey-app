@@ -4,7 +4,7 @@
 
 For my second project I chose to create an app that can be used by local amateur players to keep track of available playing times at local ice rinks. These available playing times are referred to as "sticktimes". 
 
-The Sticktimes App allows a user to have favorite rinks and view the available stick times for each rink.
+The Sticktimes App will allow a user to have favorite rinks and view the available stick times for each rink.
 
 [Sticktimes App](https://lit-river-55055.herokuapp.com/users "Sticktimes")
 

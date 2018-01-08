@@ -7,21 +7,21 @@ router.get('/:sticktimeId', (request, response) => {
     const rinkId = request.params.rinkId
     const sticktimeId = request.params.sticktimeId
 
-User.findById(userId)
-    .then((user) => {
-        const rink = user.rinks.id(rinkId)
-        const sticktime = rink.sticktimes.id(sticktimeId)
+    User.findById(userId)
+        .then((user) => {
+            const rink = user.rinks.id(rinkId)
+            const sticktime = rink.sticktimes.id(sticktimeId)
 
-        response.render('sticktimes/show', {
-            userId,
-            rink,
-            sticktime,
-            pageTitle: 'Sticktime'
+            response.render('sticktimes/show', {
+                userId,
+                rink,
+                sticktime,
+                pageTitle: 'Sticktime'
+            })
         })
-    })
-    .catch((error) => {
-        console.log(error)
-    })
+        .catch((error) => {
+            console.log(error)
+        })
 })
 
 module.exports = router

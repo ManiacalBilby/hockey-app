@@ -4,15 +4,15 @@ const Schema = mongoose.Schema
 const SticktimeSchema = new Schema({
     dayOfWeek: {
         type: String,
-        required: [ true, 'Sticktime day is required' ]
+        required: [true, 'Sticktime day is required']
     },
     time: {
         type: String,
-        required: [ true, 'Why do you think they call it stickTIME?' ]
+        required: [true, 'Why do you think they call it stickTIME?']
     },
     price: {
         type: Number,
-        required: [ true, 'Sticktime price is required!' ]
+        required: [true, 'Sticktime price is required!']
     }
 })
 
@@ -27,13 +27,13 @@ const RinkSchema = new Schema({
     phone: {
         type: String
     },
-    sticktimes: [ SticktimeSchema ]
+    sticktimes: [SticktimeSchema]
 })
 
 const UserSchema = new Schema({
     firstName: {
         type: String,
-        required: [ true, 'First name is required!']
+        required: [true, 'First name is required!']
     },
     lastName: {
         type: String,
@@ -42,13 +42,13 @@ const UserSchema = new Schema({
     photoUrl: {
         type: String
     },
-    rinks: [ RinkSchema ]
+    rinks: [RinkSchema]
 },
-{
-    timestamps: {},
-    usePushEach: true
+    {
+        timestamps: {},
+        usePushEach: true
 
-})
+    })
 
 module.exports = {
     UserSchema,
