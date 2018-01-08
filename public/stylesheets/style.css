@@ -57,7 +57,7 @@ main {
   margin-top: 10px;
   /* background-color: #ece6e6; */
 }
-
+/* box shadow generator used https://www.cssmatic.com/box-shadow */
 .user_card:hover {
   box-shadow: 6px 9px 14px 0px rgba(201,197,201,1);
 }
