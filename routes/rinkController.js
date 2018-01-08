@@ -21,7 +21,7 @@ router.get('/', (request, response) => {
 
 router.get('/new', (request, response) => {
     const userId = request.params.userId
-    
+
     response.render('rinks/new', {
         userId,
         pageTitle: 'New Rink'
@@ -44,6 +44,23 @@ router.get('/:rinkId', (request, response) => {
         .catch((error) => {
             console.log(error)
         })
+})
+
+router.post('/', (request, response) => {
+    const userId = request.params.userId
+    const newRink = request.body
+
+    User.findById(userId)
+    .then((user) => {
+        user.rinks.push(newRink)
+        return user.save()
+    })
+    .then(() => {
+        response.redirect(`/users/${userId}/rinks`)
+    })
+    .catch((error) => {
+        console.log(error)
+    })
 })
 
 module.exports = router
