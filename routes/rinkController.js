@@ -46,21 +46,38 @@ router.get('/:rinkId', (request, response) => {
         })
 })
 
+router.get('/:rinkId/edit', (request, response) => {
+    const userId = request.params.userId
+    const rinkId = request.params.rinkId
+
+    User.findById(userId)
+        .then((user) => {
+            const rink = user.rinks.id(rinkId)
+            response.render('rinks/edit', {
+                rink,
+                pageTitle: 'Update Rink'
+            })
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+})
+
 router.post('/', (request, response) => {
     const userId = request.params.userId
     const newRink = request.body
 
     User.findById(userId)
-    .then((user) => {
-        user.rinks.push(newRink)
-        return user.save()
-    })
-    .then(() => {
-        response.redirect(`/users/${userId}/rinks`)
-    })
-    .catch((error) => {
-        console.log(error)
-    })
+        .then((user) => {
+            user.rinks.push(newRink)
+            return user.save()
+        })
+        .then(() => {
+            response.redirect(`/users/${userId}/rinks`)
+        })
+        .catch((error) => {
+            console.log(error)
+        })
 })
 
 module.exports = router
