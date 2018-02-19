@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router({ mergeParams: true })
 const User = require('../db/models/User')
+const Rink = require('../db/models/Rink')
 
 router.get('/', (request, response) => {
     const userId = request.params.userId
@@ -54,6 +55,7 @@ router.get('/:rinkId/edit', (request, response) => {
         .then((user) => {
             const rink = user.rinks.id(rinkId)
             response.render('rinks/edit', {
+                userId,
                 rink,
                 pageTitle: 'Update Rink'
             })
@@ -79,5 +81,30 @@ router.post('/', (request, response) => {
             console.log(error)
         })
 })
+
+router.put('/:rinkId', (request, response) => {
+    const userId = request.params.userId
+    const rinkId = request.params.rinkId
+    const updatedRinkInfo = request.body
+    console.log(updatedRinkInfo)
+
+    User.findById(userId)
+    .then((user) => {
+        let originalRinkInfo = user.rinks.id(rinkId)
+        originalRinkInfo.name = updatedRinkInfo.name
+        originalRinkInfo.photoUrl = updatedRinkInfo.photoUrl
+        originalRinkInfo.phone = updatedRinkInfo.phone
+        originalRinkInfo.location = updatedRinkInfo.location
+        return user.save()
+    })
+        .then(() => {
+            response.redirect(`/users/${userId}/rinks/${rinkId}`)
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+})
+
+
 
 module.exports = router
