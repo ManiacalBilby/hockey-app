@@ -38,6 +38,11 @@ header {
   font-size: 1.5rem;
 }
 
+.day_of_week {
+  font-size: 1.5rem;
+  display: inline-block;
+}
+
 .profile_image {
   height: 200px;
   width: 200px;

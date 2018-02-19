@@ -11,8 +11,8 @@
     <div>
         {{#each rink.sticktimes}}
         <h1>Available sticktimes:</h1>
-        <a href="/users/{{../userId}}/rinks/{{../rink._id}}/sticktimes/{{this._id}}">
-            <h2>{{this.dayOfWeek}}</h2>
+        <a class="day_of_week" href="/users/{{../userId}}/rinks/{{../rink._id}}/sticktimes/{{this._id}}">
+            <div>{{this.dayOfWeek}}</div>
         </a>
         {{/each}}
     </div>
