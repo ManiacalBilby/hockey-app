@@ -1,25 +1,27 @@
-<h1>Let's add a rink!</h1>
+<h1>Add a new rink</h1>
 
-<form action="/users/{{userId}}/rinks" method="POST">
-    <div>
+<form class="form_container" action="/users/{{userId}}/rinks" method="POST">
+    <div class="form_field">
         <label for="name">Rink Name</label>
         <input type="text" name="name" required/>
     </div>
 
-    <div>
+    <div class="form_field">
         <label for="photoUrl">Photo Link</label>
         <input type="text" name="photoUrl" />
     </div>
 
-    <div>
+    <div class="form_field">
         <label for="phone">Phone #</label>
         <input type="text" name="phone" required/>
     </div>
 
-    <div>
+    <div class="form_field">
         <label for="location">City</label>
         <input type="text" name="location" required/>
     </div>
 
-    <input type="submit" value="Add Rink">
+    <div class="button_container">
+        <input class="btn" type="submit" value="Add Rink">
+    </div>
 </form>

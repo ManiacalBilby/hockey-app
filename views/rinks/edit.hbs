@@ -1,23 +1,27 @@
-<h1>Rink Edit page</h1>
+<h1>Edit details for {{rink.name}}</h1>
 
-<form action="/users/{{userId}}/rinks/{{rink._id}}?_method=PUT" method="POST">
-    <div>
+<form class="form_container" action="/users/{{userId}}/rinks/{{rink._id}}?_method=PUT" method="POST">
+    <div class="form_field">
         <label for="name">Name</label>
         <input type="text" name="name" value="{{rink.name}}" required/>
     </div>
 
-    <div>
+    <div class="form_field">
         <label for="photoUrl">Photo Link</label>
         <input type="text" name="photoUrl" value="{{rink.photoUrl}}" required/>
     </div>
 
-    <div>
+    <div class="form_field">
         <label for="phone">Phone #</label>
         <input type="text" name="phone" value="{{rink.phone}}" />
     </div>
-    <div>
-        <label for="location">Location #</label>
+
+    <div class="form_field">
+        <label for="location">Location</label>
         <input type="text" name="location" value="{{rink.location}}" />
     </div>
-    <input type="submit" value="Update Rink">
+
+    <div class="button_container">
+    <input class="btn" type="submit" value="Update Rink">
+    </div>
 </form>

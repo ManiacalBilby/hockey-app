@@ -1,17 +1,22 @@
-<form action="/users/{{user._id}}?_method=PUT" method="POST">
-    <div>
+<h1>Update {{user.firstName}}'s information</h1>
+
+<form class="form_container" action="/users/{{user._id}}?_method=PUT" method="POST">
+    <div class="form_field">
         <label for="firstName">First Name</label>
         <input type="text" name="firstName" value="{{user.firstName}}" required/>
     </div>
 
-    <div>
+    <div class="form_field">
         <label for="lastName">Last Name</label>
         <input type="text" name="lastName" value="{{user.lastName}}" required/>
     </div>
 
-    <div>
+    <div class="form_field">
         <label for="photoUrl">Photo Link</label>
         <input type="text" name="photoUrl" value="{{user.photoUrl}}" />
     </div>
-    <input type="submit" value="Update Profile">
+
+    <div class="button_container">
+        <input class="btn" type="submit" value="Update Profile">
+    </div>
 </form>
