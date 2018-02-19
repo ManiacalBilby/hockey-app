@@ -1,6 +1,6 @@
 body {
   font: 14px 'Open Sans', sans-serif;
-  background-color: white;
+  background-color: rgb(243, 248, 250);
 }
 
 .user_cards a {
@@ -18,14 +18,29 @@ main {
   padding: 20px;
 }
 
-.app_title {
+a {
+  text-decoration: none;
   color: #275DAD;
+}
+
+.app_title {
   opacity: 1;
   font-family: 'Righteous', cursive;
   font-size: 3.25rem;
   margin: 0 auto;
   padding-left: 20px;
+}
 
+.app_title a {
+  opacity: .90;
+}
+
+.rink_name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Righteous', cursive;
+  font-size: 1.5rem;
 }
 
 .profile_image {

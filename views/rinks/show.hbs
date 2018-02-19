@@ -1,18 +1,23 @@
-<div>
-    <h1>{{rink.name}}</h1>
-    <h2>City: {{rink.location}}</h2>
-    <h3>Phone#: {{rink.phone}}</h3>
-</div>
+<body class="rink_background">
+    <div class="rink_name">
+        <h1>{{rink.name}}</h1>
+    </div>
 
-<div>
-    {{#each rink.sticktimes}}
-    <h2>Available sticktimes:</h2>
-    <a href="/users/{{../userId}}/rinks/{{../rink._id}}/sticktimes/{{this._id}}">
-        {{this.dayOfWeek}}
-    </a>
-    {{/each}}
-</div>
+    <div>
+        <h2>City: {{rink.location}}</h2>
+        <h2>Phone#: {{rink.phone}}</h2>
+    </div>
 
-<div class="button_container">
-    <a class="btn" href="/users/{{userId}}/rinks/{{rink._id}}/edit">Edit Rink</a>
-</div>
+    <div>
+        {{#each rink.sticktimes}}
+        <h1>Available sticktimes:</h1>
+        <a href="/users/{{../userId}}/rinks/{{../rink._id}}/sticktimes/{{this._id}}">
+            <h2>{{this.dayOfWeek}}</h2>
+        </a>
+        {{/each}}
+    </div>
+
+    <div class="button_container">
+        <a class="btn" href="/users/{{userId}}/rinks/{{rink._id}}/edit">Edit Rink</a>
+    </div>
+</body>
