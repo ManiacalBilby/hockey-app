@@ -49,6 +49,11 @@ header {
   border-radius: 25%
 }
 
+.rink_image {
+  height: 275px;
+  width: 300px;
+}
+
 /* Forms */
 
 .form_container {
