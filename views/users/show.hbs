@@ -1,17 +1,22 @@
-<h1>{{user.firstName}} {{user.lastName}}</h1>
+<div class="user_show">
+<div class="user_card_container_show">
+    <h1>{{user.firstName}} {{user.lastName}}</h1>
 
-<div>
-    <img class="profile_image" src="{{user.photoUrl}}" alt="{{this.firstName}}'s profile photo">
+    <div>
+        <img class="profile_image" src="{{user.photoUrl}}" alt="{{this.firstName}}'s profile photo">
+    </div>
+
+    <div class="update_delete_user">
+        <div>
+            <a href="/users/{{user._id}}/edit">Update</a>
+        </div>
+        <div>
+            <a href="/users/{{user._id}}/delete">Delete</a>
+        </div>
+    </div>
+
+    <div class="button_container">
+        <a class="btn" href="/users/{{user._id}}/rinks">Favorite Rinks</a>
+    </div>
 </div>
-
-<div>
-    <a href="/users/{{user._id}}/edit">Update</a>
-</div>
-
-<div>
-    <a href="/users/{{user._id}}/delete">Delete</a>
-</div>
-
-<div class="button_container">
-    <a class="btn" href="/users/{{user._id}}/rinks">Favorite Rinks</a>
 </div>

@@ -1,11 +1,15 @@
 <h1>{{userFullName}}'s Favorite Rinks</h1>
 
-<div>
+<div class="rinks_container">
     {{#each rinks}}
-    <div>
-        <a href="/users/{{../userId}}/rinks/{{this._id}}">
-            <h3>{{this.name}}</h3>
-            <img class="rink_image" src="{{this.photoUrl}}" alt="{{this.name}} photo">
+    <div class="rink_card">
+        <a class="rink_card_inner"href="/users/{{../userId}}/rinks/{{this._id}}">
+            <div>
+                <h3>{{this.name}}</h3>
+            </div>
+            <div>
+                <img class="rink_image" src="{{this.photoUrl}}" alt="{{this.name}} photo">
+            </div>
         </a>
     </div>
     {{/each}}
